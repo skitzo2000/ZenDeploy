@@ -1,0 +1,28 @@
+# Application Theme Configuration
+app_name: "ZENDEPLOY"
+display_version: "1.0.0"  # Version shown in splash screen
+author: "Your Name"
+date: "2024"
+description: "\"for really zen deployments\" - quote from some guy"
+
+# Splash Screen Configuration
+splash:
+  prompt: "Press any key to continue..."
+  # Available fonts include: 
+  # - 'banner3'      # Good for wide displays
+  # - 'speed'        # Tech looking, compact
+  # - 'big'          # Classic, readable
+  # - 'doom'         # Gaming style
+  # - 'isometric1'   # 3D effect
+  # - 'larry3d'      # 3D with shadows
+  # - 'digital'      # LCD display style
+  # - 'slant'        # Default
+  font: "big"  
+  box:
+    enabled: true
+    style: "double"  # can be 'single', 'double', or 'heavy'
+  colors:
+    title: "bright_blue"
+    subtitle: "white"
+    version: "grey70"
+    prompt: "yellow" 

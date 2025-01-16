@@ -1,0 +1,8 @@
+name: "Invalid Test"
+aws_profile: "default"
+repo_url: "file://./tests/test_repos/repo2"
+ssh_key: "~/.ssh/id_rsa"
+script_path: "scripts/world.sh"
+env_vars:
+  TEST_VAR: "Invalid"
+  DEBUG: "true" 

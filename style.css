@@ -1,0 +1,216 @@
+/* Main layout */
+Screen {
+    background: $surface;
+    color: $text;
+}
+
+/* Reference Links:
+   - Pyfiglet Fonts: https://github.com/pwaller/pyfiglet/tree/master/pyfiglet/fonts
+   - Preview all fonts: http://www.figlet.org/examples.html
+*/
+
+/* Header and Footer */
+Header {
+    dock: top;
+    height: 1;
+    background: $primary;
+    color: $text;
+    text-align: center;
+}
+
+Footer {
+    background: $primary;
+    height: 1;
+    dock: bottom;
+    padding: 0;
+    layout: horizontal;
+}
+
+Footer > .footer--key {
+    background: $primary;
+    color: $text;
+    padding: 0 1;
+}
+
+Footer > .footer--highlight {
+    background: $primary-lighten-2;
+    color: $text;
+}
+
+/* Main container */
+#main-container {
+    width: 100%;
+    height: 100%;
+    background: $surface;
+}
+
+/* File browser */
+#file-browser {
+    dock: left;
+    width: 50%;
+    height: 100%;
+    border: solid $primary;
+}
+
+/* YAML panel */
+#yaml-panel {
+    dock: right;
+    width: 50%;
+    height: 100%;
+    border-left: solid $primary;
+}
+
+/* Review screen */
+#review-container {
+    width: 100%;
+    height: 100%;
+}
+
+#preview-pane {
+    width: 50%;
+    height: 100%;
+    border: solid $primary;
+}
+
+#env-pane {
+    width: 50%;
+    height: 100%;
+    border-left: solid $primary;
+}
+
+.preview-header {
+    background: $primary;
+    color: $text;
+    padding: 1;
+}
+
+.preview-separator {
+    color: $primary-lighten-2;
+}
+
+.preview-step {
+    color: $text;
+    padding-left: 1;
+}
+
+.preview-detail {
+    color: $text-muted;
+    padding-left: 2;
+}
+
+/* Deployment progress screen */
+#zd-container {
+    width: 100%;
+    height: 100%;
+}
+
+#zd-log {
+    height: 100%;
+    border: none;
+    padding: 1;
+}
+
+#zd-progress {
+    width: 100%;
+    height: 100%;
+}
+
+#zd-status {
+    height: 3;
+    padding: 1;
+}
+
+#log-section {
+    height: 1fr;
+}
+
+#formatted-log-section, #raw-log-section {
+    width: 1fr;
+    height: 100%;
+    border: solid $primary;
+}
+
+#formatted-log, #raw-log {
+    height: 100%;
+    border: none;
+    padding: 1;
+}
+
+/* Progress bar */
+#progress-bar {
+    height: 1;
+    width: 100%;
+    color: $success;
+}
+
+/* ZenDeploy Splash Screen Styles */
+#zd-splash-content {
+    align: center middle;
+    width: 100%;
+    height: 100%;
+    background: $surface;
+    padding: 2;
+}
+
+.zd-splash-spacer {
+    height: 2;
+}
+
+.zd-splash-title {
+    color: $primary;
+    text-align: center;
+    content-align: center middle;
+}
+
+.zd-splash-subtitle {
+    color: $text;
+    text-align: center;
+    margin: 1;
+    padding-top: 1;
+}
+
+.zd-splash-version {
+    color: $text-muted;
+    text-align: center;
+}
+
+.zd-splash-prompt {
+    color: $warning;
+    text-align: center;
+    margin-top: 2;
+}
+
+.zd-splash-author {
+    color: $text-muted;
+    text-align: center;
+    margin-top: 1;
+}
+
+/* ZenDeploy transition effects */
+.zd-fade-out {
+    opacity: 0;
+    transition: opacity 500ms linear;
+}
+
+/* ZenDeploy Branding */
+#zd-branding {
+    dock: right;
+    width: auto;
+    height: 1;
+    padding: 0 1;
+    color: $text;
+    background: $primary;
+    margin-right: 0;
+}
+
+#footer-keys {
+    dock: left;
+    background: $primary;
+    color: $text;
+    padding: 0 1;
+}
+
+.right-aligned {
+    text-align: right;
+    align: right middle;
+} 

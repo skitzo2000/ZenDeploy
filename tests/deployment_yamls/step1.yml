@@ -1,0 +1,8 @@
+name: "Hello Test"
+aws_profile: "default"
+repo_url: "file://./tests/test_repos/repo1"
+ssh_key: "~/.ssh/id_rsa"
+script_path: "scripts/hello.sh"
+env_vars:
+  TEST_VAR: "Hello"
+  DEBUG: "true" 
