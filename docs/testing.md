@@ -1,21 +1,47 @@
 # ZenDeploy Testing Guide
 
+## Quick Start
+
+ZenDeploy uses Make commands to simplify testing:
+
+```bash
+# Clean everything and run tests
+make all
+
+# Individual commands
+make clean    # Clean up test environment
+make setup    # Set up test environment
+make test     # Run tests
+```
+
 ## Setting Up the Test Environment
 
-Before running tests, you need to set up the test environment which creates local repositories and test files.
+The test environment can be set up in two ways:
 
-1. Run the test environment setup script:
+1. Using Make (recommended):
+```bash
+make setup
+```
+
+2. Manually:
 ```bash
 python3 tests/setup_test_env.py
 ```
 
-2. Verify the test environment:
-   - Check that the `tests/test_repos` directory was created
-   - Verify that test repositories contain the required scripts
+## Cleaning Up
 
-## Running Tests
+Before submitting code or if you encounter issues, clean the test environment:
 
-[Test documentation to be added]
+```bash
+make clean
+```
+
+This will remove:
+- Test repositories
+- Python cache files
+- Log files
+- Test cache
+- Compiled Python files
 
 ## Test Structure
 
@@ -23,6 +49,10 @@ The test environment creates:
 - Local Git repositories for testing deployment scripts
 - Sample YAML configuration files
 - Test deployment scripts
+
+## Running Tests
+
+[Test documentation to be added]
 
 ## Writing New Tests
 
