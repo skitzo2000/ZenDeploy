@@ -1,8 +1,6 @@
-textual==0.52.1    # Pin to exact version
-PyYAML>=6.0.1      # YAML file handling
-GitPython>=3.1.40  # Git operations
-typing-extensions>=4.7.1  # Type hints support
-anyio>=4.2.0       # Async file operations
-pathlib>=1.0.1     # Path handling 
-rich>=13.7.0
-pyfiglet>=1.0.2 
+textual
+PyYAML
+GitPython
+pyfiglet
+rich
+typing 

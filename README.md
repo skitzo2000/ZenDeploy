@@ -1,17 +1,17 @@
-ZenDeploy (ZD)
+# ZenDeploy (ZD)
 
 A Terminal User Interface (TUI) application for managing and executing AWS deployments through YAML configurations. ZenDeploy provides a streamlined way to manage deployment scripts, configure AWS environments, and execute deployments with real-time monitoring and comprehensive audit logging that includes the system user.
 
 The tool allows users to browse deployment YAML files, chain multiple deployment steps together, and execute them while maintaining proper AWS profile management and secure Git repository access. All actions are logged for audit purposes, making it ideal for teams requiring deployment tracking and verification.
 
-There are a few limitations currently:
+## Current Limitations
 - This is an alpha stage product it is not ready for production use.
 - The application is not fully functional and does not work as expected.
 - The application is not fully tested and may not work as expected.
 - The application is not fully documented and may not work as expected.
 - The application is not fully secure and may not work as expected.
 
-Planned Features/Current fucntional limitations:
+## Planned Features/Current Functional Limitations
 - There is no way to clear the deployment list once its created.  You must exit the interface and re enter to clear the list.
 - Keybindings show on all pages but not all keys work on all pages, currently there is error handling for mis hit keys. I would like to filter the view to only show keys that are relevant to the current screen.
 - Mouse support only works on the main file tree screen and no where else.
@@ -21,20 +21,58 @@ Planned Features/Current fucntional limitations:
   - Currently AWS support is embeded but this will be replaced with a plugin system in the future.
   - I would like the system to be modular and allow for plugins to be added for other services such as Azure, GCP, etc. in the future.  As well as supporting other deployment methods such as Docker, Helm, etc. as extra components beyond the standard script deploy.
 
+## Installation and Dependencies
+
+### Prerequisites
+- Python 3.8+
+- Git
+- AWS CLI configured with profiles
+- SSH access to required Git repositories
+
+### Installation Steps
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd zendeploy
+   ```
+
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate  # On Linux/macOS
+   .venv\Scripts\activate     # On Windows
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Required Dependencies
+- textual: Modern TUI framework for Python
+- PyYAML: YAML file parsing and manipulation
+- GitPython: Git repository operations
+- pyfiglet: ASCII art generation
+- rich: Rich text formatting
+- typing: Type hints support
+
 Project Structure:
 
 zendeploy/
 ├── src/
-│   ├── __init__.py
-│   ├── main.py              # Application entry point and TUI initialization
-│   ├── deployment_manager.py # Handles deployment step management
-│   ├── deployment_executor.py# Executes deployment steps
-│   ├── review_screen.py     # Review and execution screen
-│   └── audit_logger.py      # Audit logging functionality
-├── logs/                    # Directory for audit and deployment logs
-├── requirements.txt         # Project dependencies
-├── theme.yml               # Application theming configuration
-└── README.md              # This file
+│ ├── init.py
+│ ├── main.py # Application entry point and TUI initialization
+│ ├── deployment_manager.py # Handles deployment step management
+│ ├── deployment_executor.py# Executes deployment steps
+│ ├── review_screen.py # Review and execution screen
+│ └── audit_logger.py # Audit logging functionality
+├── logs/ # Directory for audit and deployment logs
+├── requirements.txt # Project dependencies
+├── theme.yml # Application theming configuration
+└── README.md # This file
+
+
 
 INSTALLATION AND DEPENDENCIES
 ---------------------------
@@ -133,26 +171,36 @@ Want to help? Here's how:
 4. Push to branch
 5. Create Pull Request
 
-CREDITS AND REFERENCES
---------------------
+## Credits and References
+
 This project utilizes the following open source projects:
 
-- Textual: Modern TUI framework
+- **Textual**: Modern TUI framework  
   https://github.com/Textualize/textual
 
-- Pyfiglet: ASCII art generation
-  https://github.com/pwaller/pyfiglet
+- **Pyfiglet**: ASCII art generation  
+  https://github.com/pwaller/pyfiglet  
   Font Preview: http://www.figlet.org/examples.html
 
-- PyYAML: YAML file parsing
+- **PyYAML**: YAML file parsing  
   https://pyyaml.org/
 
-- Rich: Terminal formatting
+- **Rich**: Terminal formatting  
   https://github.com/Textualize/rich
 
-- GitPython: Git operations
+- **GitPython**: Git operations  
   https://github.com/gitpython-developers/GitPython
 
-License: MIT
+## License
+
+[MIT License](LICENSE)
+
+## Documentation
+
+Detailed documentation can be found in the `docs` directory:
+
+- [Testing Guide](docs/testing.md) - Instructions for running and creating tests
+- [Installation](docs/installation.md) - Detailed installation instructions
+- [Configuration](docs/configuration.md) - Configuration file details and examples
 
 

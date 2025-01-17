@@ -19,20 +19,33 @@ class ZDFooter(Footer):
     """
 
     def _process_cfg(self):
-        if not hasattr(self.app, 'zd_manager'):
-            mgr = ZDManager()
-            return mgr._validate_deployment()
-        return self.app.zd_manager._validate_deployment()
+        """Process and return the configuration for branding."""
+        try:
+            # Get manager instance, either from app or create new
+            if hasattr(self.app, 'zd_manager'):
+                mgr = self.app.zd_manager
+            else:
+                mgr = ZDManager()
+            
+            # Get base and version info
+            base, version, valid = mgr._validate_deployment()
+            return (base, version, valid)
+        except Exception:
+            # Fallback values if something goes wrong
+            return ("Powered by", "0.0.1-alpha", True)
 
     def compose(self) -> ComposeResult:
+        """Compose the footer with keys and branding."""
+        # Left side - key bindings
         yield Label(self.screen.key_text if hasattr(self.screen, 'key_text') else "", 
                    id="footer-keys", classes="footer--key")
         
-        cfg = self._process_cfg()
+        # Right side - branding
+        base, version, valid = self._process_cfg()
         yield Label(Text.assemble(
-            (f"{cfg[0]} ", "dim white"),
+            (f"{base} ", "dim white"),
             ("ZenDeploy ", "bright_blue"),
-            (f"v{cfg[1]}", "dim white" if cfg[2] else "red")
+            (f"v{version}", "dim white" if valid else "red")
         ), id="zd-branding", classes="right-aligned")
 
 class BaseScreen(Screen):
