@@ -4,26 +4,9 @@ A Terminal User Interface (TUI) application for managing and executing AWS deplo
 
 ## Screenshots
 
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
-    <img src="docs/assets/splash.png" width="400" alt="Splash Screen"/>
-    <p align="center"><em>ZenDeploy Welcome Screen</em></p>
-  </div>
-  <div style="display: inline-block; margin: 10px;">
-    <img src="docs/assets/Main.png" width="400" alt="Main Interface"/>
-    <p align="center"><em>Main interface for deployment file selection</em></p>
-  </div>
-</div>
-<div align="center">
-  <div style="display: inline-block; margin: 10px;">
-    <img src="docs/assets/review.png" width="400" alt="Review Screen"/>
-    <p align="center"><em>Deployment review and configuration screen</em></p>
-  </div>
-  <div style="display: inline-block; margin: 10px;">
-    <img src="docs/assets/deploy.png" width="400" alt="Deployment Progress"/>
-    <p align="center"><em>Deployment execution and progress monitoring</em></p>
-  </div>
-</div>
+| <img src="docs/assets/splash.png" width="200" alt="Splash Screen"/><br/><em>ZenDeploy Welcome Screen</em> | <img src="docs/assets/Main.png" width="200" alt="Main Interface"/><br/><em>Main interface for deployment file selection</em> |
+|:---:|:---:|
+| <img src="docs/assets/review.png" width="200" alt="Review Screen"/><br/><em>Deployment review and configuration screen</em> | <img src="docs/assets/deploy.png" width="200" alt="Deployment Progress"/><br/><em>Deployment execution and progress monitoring</em> |
 
 ## Current Limitations
 - This is an alpha stage product it is not ready for production use.
