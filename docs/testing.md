@@ -52,8 +52,4 @@ The test environment creates:
 
 ## Running Tests
 
-[Test documentation to be added]
-
-## Writing New Tests
-
-[Test writing documentation to be added] 
+Tests are run thru the TUI interface.  Navigate to the test folder with the test deployment yamls add as you like as the test.
