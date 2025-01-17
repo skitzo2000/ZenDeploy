@@ -1,7 +1,7 @@
 # Application Theme Configuration
 app_name: "ZENDEPLOY"
-display_version: "1.0.0"  # Version shown in splash screen
-author: "Your Name"
+display_version: "0.1"  # Version shown in splash screen
+author: "Paul Norton"
 date: "2024"
 description: "\"for really zen deployments\" - quote from some guy"
 
