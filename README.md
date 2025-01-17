@@ -5,22 +5,22 @@ A Terminal User Interface (TUI) application for managing and executing AWS deplo
 ## Screenshots
 
 <div align="center">
-  <div style="display: inline-block; width: 45%; margin: 10px;">
-    <img src="docs/assets/splash.png" width="100%" alt="Splash Screen"/>
+  <div style="display: inline-block; margin: 10px;">
+    <img src="docs/assets/splash.png" width="400" alt="Splash Screen"/>
     <p align="center"><em>ZenDeploy Welcome Screen</em></p>
   </div>
-  <div style="display: inline-block; width: 45%; margin: 10px;">
-    <img src="docs/assets/Main.png" width="100%" alt="Main Interface"/>
+  <div style="display: inline-block; margin: 10px;">
+    <img src="docs/assets/Main.png" width="400" alt="Main Interface"/>
     <p align="center"><em>Main interface for deployment file selection</em></p>
   </div>
 </div>
 <div align="center">
-  <div style="display: inline-block; width: 45%; margin: 10px;">
-    <img src="docs/assets/review.png" width="100%" alt="Review Screen"/>
+  <div style="display: inline-block; margin: 10px;">
+    <img src="docs/assets/review.png" width="400" alt="Review Screen"/>
     <p align="center"><em>Deployment review and configuration screen</em></p>
   </div>
-  <div style="display: inline-block; width: 45%; margin: 10px;">
-    <img src="docs/assets/deploy.png" width="100%" alt="Deployment Progress"/>
+  <div style="display: inline-block; margin: 10px;">
+    <img src="docs/assets/deploy.png" width="400" alt="Deployment Progress"/>
     <p align="center"><em>Deployment execution and progress monitoring</em></p>
   </div>
 </div>
