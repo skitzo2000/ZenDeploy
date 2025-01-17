@@ -4,17 +4,9 @@ A Terminal User Interface (TUI) application for managing and executing AWS deplo
 
 ## Screenshots
 
-![Splash Screen](docs/assets/splash.png)
-*ZenDeploy Welcome Screen*
-
-![Main Interface](docs/assets/Main.png)
-*Main interface for deployment file selection*
-
-![Review Screen](docs/assets/review.png)
-*Deployment review and configuration screen*
-
-![Deployment Progress](docs/assets/deploy.png)
-*Deployment execution and progress monitoring*
+| <img src="docs/assets/splash.png" width="200" alt="Splash Screen"/><br/><em>ZenDeploy Welcome Screen</em> | <img src="docs/assets/Main.png" width="200" alt="Main Interface"/><br/><em>Main interface for deployment file selection</em> |
+|:---:|:---:|
+| <img src="docs/assets/review.png" width="200" alt="Review Screen"/><br/><em>Deployment review and configuration screen</em> | <img src="docs/assets/deploy.png" width="200" alt="Deployment Progress"/><br/><em>Deployment execution and progress monitoring</em> |
 
 ## Current Limitations
 - This is an alpha stage product it is not ready for production use.
