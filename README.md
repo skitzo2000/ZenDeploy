@@ -2,7 +2,19 @@
 
 A Terminal User Interface (TUI) application for managing and executing AWS deployments through YAML configurations. ZenDeploy provides a streamlined way to manage deployment scripts, configure AWS environments, and execute deployments with real-time monitoring and comprehensive audit logging that includes the system user.
 
-The tool allows users to browse deployment YAML files, chain multiple deployment steps together, and execute them while maintaining proper AWS profile management and secure Git repository access. All actions are logged for audit purposes, making it ideal for teams requiring deployment tracking and verification.
+## Screenshots
+
+![Splash Screen](docs/assets/splash.png)
+*ZenDeploy Welcome Screen*
+
+![Main Interface](docs/assets/Main.png)
+*Main interface for deployment file selection*
+
+![Review Screen](docs/assets/review.png)
+*Deployment review and configuration screen*
+
+![Deployment Progress](docs/assets/deploy.png)
+*Deployment execution and progress monitoring*
 
 ## Current Limitations
 - This is an alpha stage product it is not ready for production use.
