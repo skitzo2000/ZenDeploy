@@ -24,14 +24,6 @@ make setup
 ```
 
 2. Manually:
-=======
-## Setting Up the Test Environment
-
-Before running tests, you need to set up the test environment which creates local repositories and test files.
-
-1. Run the test environment setup script:
-
-
 ```bash
 python3 tests/setup_test_env.py
 ```
@@ -50,10 +42,6 @@ This will remove:
 - Log files
 - Test cache
 - Compiled Python files
-=======
-2. Verify the test environment:
-   - Check that the `tests/test_repos` directory was created
-   - Verify that test repositories contain the required scripts
 
 ## Test Structure
 
@@ -63,4 +51,5 @@ The test environment creates:
 - Test deployment scripts
 
 ## Running Tests
+
 Tests are run thru the TUI interface.  Navigate to the test folder with the test deployment yamls add as you like as the test.
