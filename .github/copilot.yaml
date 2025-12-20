@@ -1,42 +1,58 @@
 # GitHub Copilot Agent configuration for ZenDeploy
-name: ZenDeploy Copilot Agent
+name: ZenDeploy Development Assistant
 description: >-
-  Your helpful AI assistant for automating, managing, and troubleshooting deployment tasks in ZenDeploy. 
-  Ask about configurations, workflows, or common problems—I'm here to help!
+  Your AI development partner for contributing to ZenDeploy. 
+  Get help with code architecture, implementing features, writing tests, debugging issues, 
+  and following best practices for this Python TUI application.
 language: en
 visibility: public
 
 agent:
   instructions: |-
-    - You are ZenDeploy's Copilot Agent.
-    - Help users understand, modify, and debug deployment configurations.
-    - Suggest improvements and best practices for deployment automation.
-    - Answer questions about ZenDeploy's codebase and usage.
+    - You are ZenDeploy's Development Copilot Agent.
+    - Help developers understand the codebase architecture and design patterns.
+    - Assist with implementing new features and refactoring existing code.
+    - Guide developers in writing tests and debugging issues.
+    - Suggest best practices for Python development and Textual TUI framework.
+    - Help with code reviews and identifying potential improvements.
+    - Provide context on dependencies: Textual, PyYAML, GitPython, pyfiglet, rich.
     - If unsure, ask for clarification.
   model: gpt-4
   actions:
     - name: code-search
-      description: Search codebase for relevant files or functions
+      description: Search codebase for relevant files, functions, or patterns
     - name: file-update
-      description: Propose or perform edits on project files
+      description: Propose or implement code changes
+    - name: test-generation
+      description: Generate or improve unit tests
+    - name: code-review
+      description: Review code for bugs, style, and best practices
     - name: documentation
-      description: Answer documentation questions or propose doc additions
+      description: Update or improve code documentation
 
 taskTemplates:
-  # Describe a deployment workflow
-  - title: "Describe a deployment workflow"
-    request: "Explain how deployments are handled in ZenDeploy."
-  # Debug a configuration file
-  - title: "Debug a deployment configuration"
+  # Understand code architecture
+  - title: "Explain code architecture"
+    request: "Explain how [component/module] works in the ZenDeploy codebase."
+  # Implement a new feature
+  - title: "Implement a new feature"
     request: |-
-      "Here is my deployment config: [insert config]. Can you find any errors or improvements?"
-  # Add a deployment step
-  - title: "Add a deployment step"
+      "Help me implement [feature description] in ZenDeploy."
+  # Write tests
+  - title: "Write tests for a component"
     request: |-
-      "Modify my pipeline to add a step for [describe step]."
-  # General troubleshooting
-  - title: "Troubleshoot a deployment issue"
+      "Generate unit tests for [component/function] in ZenDeploy."
+  # Debug an issue
+  - title: "Debug a code issue"
     request: |-
-      "I encountered this error during deployment: [insert error]. How should I fix it?"
+      "I'm seeing this error: [insert error]. Help me debug it in the codebase."
+  # Code review
+  - title: "Review my code changes"
+    request: |-
+      "Review these changes: [describe or paste changes]. Suggest improvements."
+  # Refactor code
+  - title: "Refactor code"
+    request: |-
+      "Help me refactor [component/function] to improve [aspect: performance/readability/maintainability]."
 
 # You can extend with more templates and agent settings as needed.
