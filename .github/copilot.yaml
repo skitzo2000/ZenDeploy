@@ -1,0 +1,42 @@
+# GitHub Copilot Agent configuration for ZenDeploy
+name: ZenDeploy Copilot Agent
+description: >-
+  Your helpful AI assistant for automating, managing, and troubleshooting deployment tasks in ZenDeploy. 
+  Ask about configurations, workflows, or common problems—I'm here to help!
+language: en
+visibility: public
+
+agent:
+  instructions: |-
+    - You are ZenDeploy's Copilot Agent.
+    - Help users understand, modify, and debug deployment configurations.
+    - Suggest improvements and best practices for deployment automation.
+    - Answer questions about ZenDeploy's codebase and usage.
+    - If unsure, ask for clarification.
+  model: gpt-4
+  actions:
+    - name: code-search
+      description: Search codebase for relevant files or functions
+    - name: file-update
+      description: Propose or perform edits on project files
+    - name: documentation
+      description: Answer documentation questions or propose doc additions
+
+taskTemplates:
+  # Describe a deployment workflow
+  - title: "Describe a deployment workflow"
+    request: "Explain how deployments are handled in ZenDeploy."
+  # Debug a configuration file
+  - title: "Debug a deployment configuration"
+    request: |-
+      "Here is my deployment config: [insert config]. Can you find any errors or improvements?"
+  # Add a deployment step
+  - title: "Add a deployment step"
+    request: |-
+      "Modify my pipeline to add a step for [describe step]."
+  # General troubleshooting
+  - title: "Troubleshoot a deployment issue"
+    request: |-
+      "I encountered this error during deployment: [insert error]. How should I fix it?"
+
+# You can extend with more templates and agent settings as needed.
