@@ -3,4 +3,3 @@ PyYAML
 GitPython
 pyfiglet
 rich
-typing 

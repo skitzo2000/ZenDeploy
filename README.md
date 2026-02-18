@@ -26,7 +26,7 @@ git clone repo
 
 3. Install dependencies:
    ```bash
-   pip install -r requirements.txy
+   pip install -r requirements.txt
    ```
 
 4. Run App:
